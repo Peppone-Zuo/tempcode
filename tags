@@ -1,0 +1,15 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+HelloHust	.\c++\hello.h	/^class HelloHust {$/;"	c
+getData	.\temp.py	/^def getData():$/;"	f
+getEvents	.\temp.py	/^def getEvents(data):$/;"	f
+getLevel	.\temp.cpp	/^char getLevel(int iResult) {$/;"	f
+getLevelNeat	.\temp.cpp	/^char getLevelNeat(int iResult) {$/;"	f
+main	.\c++\main.cpp	/^int main() {$/;"	f
+main	.\temp.c	/^int main() {$/;"	f
+main	.\temp.cpp	/^int main() {$/;"	f
+sayHello	.\c++\hello.cpp	/^void HelloHust::sayHello() {$/;"	f	class:HelloHust
