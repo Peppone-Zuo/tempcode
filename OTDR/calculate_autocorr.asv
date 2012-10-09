@@ -1,0 +1,8 @@
+function auto_series = calculate_autocorr(series)
+
+auto_series = zeros(1, length(series));
+for k = 1 : length(series)
+    for j = 1 : (length(series) - k)
+        auto_series(j) = auto_series + series(j) * series(j + k);
+    end
+end

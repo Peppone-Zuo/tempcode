@@ -1,0 +1,10 @@
+function [uA, uA_reverse] = conver_to_unipolar(A)
+
+beta = 1 / 2;
+uA = zeros(1, length(A));
+uA_reverse = zeros(1, length(A));
+
+for k = 1 : length(A)
+    uA(k) = beta * (1 + A(k));
+    uA_reverse(k) = beta * (1 - A(k));
+end
