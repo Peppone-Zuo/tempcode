@@ -1,19 +1,40 @@
 #include <iostream>
-#include <math.h>
-#include <math.h>
+#include "mylib.h"
+
+//template <typename elemtype>
+//void swap(elemtype &a, elemtype &b)
+//{
+//    elemtype tmp;
+//    tmp = a;
+//    a = b;
+//    b = tmp;
+//}
+//
+//
+//template <typename elemtype>
+//elemtype max(const elemtype &a, const elemtype &b)
+//{
+//    return a > b ? a : b;
+//}
+//
+//template <typename elemtype>
+//elemtype abs(const elemtype &a)
+//{
+//    return a > 0 ? a : -1 * a;
+//}  
+
 
 using namespace std;
 
-const int MAX_TRY = 10000;
 
+int main(void)
+{
+    int a = 1;
+    int b = 2;
+    cout << a << b << endl;
 
-
-int main(void) {
-    double res = 0.0;
-    double num = 5.0 / 6.0;
-    for (int i = 2; i < MAX_TRY; i++) {
-        res += pow(num, i);
-    }
-    cout << res << endl;
-    return 0;
+    a = -1;
+    cout << a << endl;
+    cout << abs(a) << endl;
+    return 0 ;
 }
