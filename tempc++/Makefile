@@ -7,6 +7,6 @@
 #mylib.o: mylib.cpp
 #	g++ -c mylib.cpp
 
-main: calc.cpp mylib.cpp
-	g++ -o a.exe calc.cpp mylib.cpp
+main: calc.cpp
+	g++ -o a.exe calc.cpp
 
