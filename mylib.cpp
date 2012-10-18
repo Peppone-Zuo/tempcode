@@ -1,12 +1,3 @@
-#include "mylib.h"
-
-int abs(const int &a)
-{
-    return a > 0 ? a : -1 * a;
-}
-
-//namespace zuo
-//{
 //    template <typename elemtype>
 //    void swap(elemtype &a, elemtype &b)
 //    {
@@ -23,9 +14,16 @@ int abs(const int &a)
 //        return a > b ? a : b;
 //    }
 //
-//    template <typename elemtype>
-//    elemtype abs(const elemtype &a)
-//    {
-//        return a > 0 ? a : -1 * a;
-//    }
-//}
+namespace zuo
+{
+    template <typename elemtype>
+    elemtype abs(elemtype a)
+    {
+        return a > 0 ? a : -1 * a;
+    }
+
+    int abs1(const int &a)
+    {
+        return a > 0 ? a : -1 * a;
+    }
+}

@@ -1,40 +1,46 @@
 #include <iostream>
-#include "mylib.h"
 
-//template <typename elemtype>
-//void swap(elemtype &a, elemtype &b)
-//{
-//    elemtype tmp;
-//    tmp = a;
-//    a = b;
-//    b = tmp;
-//}
-//
-//
-//template <typename elemtype>
-//elemtype max(const elemtype &a, const elemtype &b)
-//{
-//    return a > b ? a : b;
-//}
-//
+using namespace std;
+ 
+
+namespace zuo{
+    int abs1(const int &a);
+    template <typename elemtype>
+    elemtype abs(elemtype a);
+//    {
+//        return a > 0 ? a : -1 * a;
+//    }
+}
+
 //template <typename elemtype>
 //elemtype abs(const elemtype &a)
 //{
 //    return a > 0 ? a : -1 * a;
-//}  
+//}
 
 
-using namespace std;
 
 
 int main(void)
 {
-    int a = 1;
-    int b = 2;
-    cout << a << b << endl;
-
-    a = -1;
+    int a = -1;
     cout << a << endl;
-    cout << abs(a) << endl;
+    cout << zuo::abs1(a) << endl;
+    cout << zuo::abs(a) << endl;
     return 0 ;
+}                          
+
+namespace zuo
+{
+    template <typename elemtype>
+    elemtype abs(elemtype a)
+    {
+        return a > 0 ? a : -1 * a;
+    }
 }
+
+
+//    int abs1(const int &a)
+//    {
+//        return a > 0 ? a : -1 * a;
+//    }
