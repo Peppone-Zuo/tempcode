@@ -21,13 +21,5 @@
 
 
 #example 3
-main: calc.o mylib.o
-	g++ -o a.exe calc.o mylib.o
-
-mylib.o: mylib.cpp
-	g++ -c mylib.cpp
-
-calc.o: calc.cpp
-	g++ -c calc.cpp
-
-
+main: calc.cpp mylib.cpp
+	g++ -o a.exe calc.cpp mylib.cpp
