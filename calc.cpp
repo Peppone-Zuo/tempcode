@@ -1,46 +1,39 @@
 #include <iostream>
-
 using namespace std;
- 
 
-namespace zuo{
-    int abs1(const int &a);
-    template <typename elemtype>
-    elemtype abs(elemtype a);
-//    {
-//        return a > 0 ? a : -1 * a;
-//    }
+int size(int a[][4])
+{
+    cout << sizeof(a) << endl;
 }
-
-//template <typename elemtype>
-//elemtype abs(const elemtype &a)
-//{
-//    return a > 0 ? a : -1 * a;
-//}
-
-
 
 
 int main(void)
 {
-    int a = -1;
-    cout << a << endl;
-    cout << zuo::abs1(a) << endl;
-    cout << zuo::abs(a) << endl;
+    int i = 0;
+
+    char *p = new char[20];
+    int ip[3][4];
+    size(ip);
+
+    for (; i< 10;)
+    {
+        cout << i << endl;
+        switch (i) 
+        {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+                i++;
+            default:
+                continue;
+            case 4:
+                cout << 444 << endl;
+                i++;
+                break;
+        }
+        break;
+    }
+
     return 0 ;
 }                          
-
-namespace zuo
-{
-    template <typename elemtype>
-    elemtype abs(elemtype a)
-    {
-        return a > 0 ? a : -1 * a;
-    }
-}
-
-
-//    int abs1(const int &a)
-//    {
-//        return a > 0 ? a : -1 * a;
-//    }
