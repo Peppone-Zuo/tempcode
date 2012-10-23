@@ -1,0 +1,1695 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<title>Video Listing</title>
+
+<link rel="stylesheet" href="https://class.coursera.org/assets/core/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://class.coursera.org/assets/core/css/main.css?v=08272012" />
+<link rel="stylesheet" href="https://class.coursera.org/assets/core/css/font-awesome.css" />
+<script type="text/javascript" src="https://class.coursera.org/assets/core/js/jquery.js"></script>
+<script type="text/javascript" src="https://class.coursera.org/assets/core/js/json.js"></script>
+<script type="text/javascript" src="https://class.coursera.org/assets/core/js/hc_fix.js"></script>
+<script src="https://class.coursera.org/assets/core/js/bootstrap/bootstrap-modal.js" type="text/javascript"></script>
+<script src="https://class.coursera.org/assets/core/js/modal_focus.js" type="text/javascript"></script>
+<script src="https://class.coursera.org/assets/core/js/bind_modal_focus.js" type="text/javascript"></script>
+<script src="https://class.coursera.org/assets/core/js/top_nav_bar.js" type="text/javascript"></script>
+<script src="https://class.coursera.org/assets/core/js/get_query_parameters.js"></script>
+<script src="https://class.coursera.org/assets/app/generic/js/list_accordian.js"></script>
+<link rel="stylesheet" href="https://class.coursera.org/assets/app/generic/css/item_list.css" />
+<link rel="stylesheet" href="https://class.coursera.org/assets/core/css/jquery_ui/jquery_ui.css" />
+<script src="https://class.coursera.org/assets/core/js/jquery_ui.js"></script>
+<script src="https://class.coursera.org/assets/core/js/jquery.history.js"></script>
+<link rel="stylesheet" href="https://class.coursera.org/assets/core/css/font-awesome.css" />
+<script src="https://class.coursera.org/assets/core/js/bootstrap/bootstrap-twipsy.js"></script>
+<link rel="stylesheet" href="https://class.coursera.org/assets/app/lecture/css/lecture_dialog.css" />
+<link rel="stylesheet" href="https://class.coursera.org/assets/app/lecture/css/lecture_list.css?version=20120321" />
+<script src="https://class.coursera.org/assets/app/lecture/js/lecture_list_functions.js?view_url=https://class.coursera.org/db/lecture/view&version=20120213"></script>
+<script src="https://class.coursera.org/assets/app/lecture/js/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" href="https://class.coursera.org/assets/app/lecture/css/jquery.fancybox-1.3.4.css" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28377374-1']);
+  _gaq.push(['_setDomainName', 'coursera.org']);
+  _gaq.push(['_setAllowLinker', true]);  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  window._204 = window._204 || [];
+  window._204.push({key:"pageview", val:{}});
+
+  (function()
+  {
+    var a = document.createElement('script'); a.type = 'text/javascript'; a.async = true;
+    a.src = 'https://eventing.coursera.org/204.min.js?client=spark&user=215084';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(a, s);
+  })();
+
+</script>
+<link rel="icon" href="https://spark-public.s3.amazonaws.com/db/static/images/favicon.ico" />
+
+</head>
+
+<body>
+    <a href="#page-content" class="hidden">Skip Navigation</a>
+    <div class="hidden">
+        This page features MathJax technology to render mathematical formulae.
+        If you are using a screen reader, please visit <a href="http://www.dessci.com/en/products/mathplayer/">MathPlayer</a> to download the plugin for your browser. Please note that this is an Internet Explorer-only plugin at this time.
+    </div>
+
+    <h1 class="hidden">Introduction to Databases</h1>
+
+	
+<div class="coursera_topbar"
+ >
+    <h2 class="hidden">Top Navigation Bar</h2>
+
+    <div class="coursera_navbar_container">
+        <ul class="coursera_toplevel_nav" id="coursera_topbar">
+            <li class="coursera_top_item"><a href="https://www.coursera.org/courses/" target="_new">Courses</a></li>
+
+            
+            <li class="coursera_top_item">
+                <a href="#" rel="dropdown_aboutus" style="cursor:hand">About <i class="icon-caret-down"></i></a>
+            </li>
+
+                        
+            <li class="coursera_top_item">
+                <a href="#" rel="dropdown_my" data-user-id="215084">zuopengpeng <i class="icon-caret-down"></i></a>
+            </li>
+            
+                    </ul>
+    </div>
+
+    <ul id="dropdown_aboutus" class="coursera_submenu_nav">
+        <li class="coursera_sub_item"><a href="https://www.coursera.org/about/jobs" target="_new">Jobs</a></li>
+        <li class="coursera_sub_item"><a href="https://www.coursera.org/about/team" target="_new">Team</a></li>
+        <li class="coursera_sub_item"><a href="https://www.coursera.org/about/contact" target="_new">Contact Us</a></li>
+        <li class="coursera_sub_item"><a href="https://www.coursera.org/about/" target="_new">About Us</a></li>
+    </ul>
+
+    <ul id="dropdown_my" class="coursera_submenu_nav">
+        <li class="coursera_sub_item"><a href="https://www.coursera.org/" target="_new">Courses</a></li>
+        <li class="coursera_sub_item"><a href="https://www.coursera.org/account/profile" target="_new">Profile</a></li>
+        <li class="coursera_sub_item"><a href="https://www.coursera.org/account/settings" target="_new">Settings</a></li>
+        <li class="coursera_sub_item"><a href="https://class.coursera.org/db/class/preferences">Course Preferences</a></li>
+        <li class="coursera_sub_item"><a href="https://class.coursera.org/db/auth/logout">Logout</a></li>
+    </ul>
+
+    <div class="coursera_logo_container">
+        <a href="https://www.coursera.org/">
+        <img id="coursera_topbar_logo" src="https://class.coursera.org/assets/core/images/topbar-coursera-logo.png" alt="Coursera">
+        </a>
+    </div>
+
+</div>
+
+
+<div id="banner-top" style="background:repeat-x url('https://s3.amazonaws.com/coursera/universities/stanford/top-banner-background.png')">
+    <div id="course-logo-text">
+        <a href="https://class.coursera.org/db/class/index">
+            <div>
+                <div>
+                    <img src="https://s3.amazonaws.com/coursera/universities/stanford/top-banner.png" />
+                </div>
+                <div class="course-logo-image" style="position:absolute;top:47px;left:17px;height:68px;width:120px;">
+                    <div style="background-position:-5px 0px;background-size:130px;height:68px;width:120px;background-image:url('https://coursera-course-photos.s3.amazonaws.com/cb/61b70b13451469aa582fc91d020f64/dbLogo.jpg')">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="course-logo-name" style="position:absolute;top:87px;left:155px;">
+                <nobr>Introduction to Databases</nobr>
+            </div>
+        </a>
+    </div>
+    <div id="banner-course-info">
+        <div class="course-instructor-name">Jennifer Widom</div>
+        <div class="course-time">2012</div>
+    </div>
+</div>
+    
+        <div class="container-fluid">
+        <div class="sidebar page-sidebar" id="page-sidebar">
+            <h2 class="hidden">Side Navigation Bar</h2>
+<ul style="list-style-type:none;margin-left:0px;">
+		<li>
+		<p class="navbar_item navbar_home">
+				<a href="https://class.coursera.org/db/class/index"  >
+			Home		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_lecture">
+				<a href="https://class.coursera.org/db/lecture/index"  >
+			Video Lectures		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_quiz">
+				<a href="https://class.coursera.org/db/quiz/index"  >
+			Automated Assignments		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_quiz">
+				<a href="https://class.coursera.org/db/quiz/index?quiz_type=exam"  >
+			Automated Exams		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_forum">
+				<a href="https://class.coursera.org/db/forum/index"  >
+			Discussion Forums		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_">
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_wiki">
+				<a href="https://class.coursera.org/db/wiki/view?page=extraexercises"  >
+			Extra Exercises		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_wiki">
+				<a href="https://class.coursera.org/db/wiki/view?page=coursematerials"  >
+			Course Materials		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_wiki">
+				<a href="https://class.coursera.org/db/wiki/view?page=softwarequickguide"  >
+			Software Quick Guides		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_wiki">
+				<a href="https://class.coursera.org/db/wiki/view?page=frequentlyaskedquestions"  >
+			2011 FAQ		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_wiki">
+				<a href="https://class.coursera.org/db/wiki/view?page=courseschedule"  >
+			2011 Course Schedule		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_wiki">
+				<a href="https://class.coursera.org/db/wiki/view?page=weeklyvids"  >
+			2011 Weekly Videos		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_">
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_wiki">
+				<a href="https://class.coursera.org/db/wiki/view?page=aboutus"  >
+			Course Staff		</a>
+				</p>
+	</li>
+			<li style="padding-top:20px;">
+		<p class="navbar_item navbar_wiki">
+		<a href="http://www.meetup.com/Coursera/" target="_blank">
+			Join a Meetup
+		</a>
+		</p>
+	</li>
+			<li>
+		<p class="navbar_item navbar_wiki">
+		<a href="https://share.coursera.org/wiki/index.php/db:Main" target="_blank">
+			Course Wiki
+		</a>
+		</p>
+	</li>
+	</ul>
+
+        </div>
+        <div class="content page-content" id="page-content">
+            <div style="float: left;">
+    <h2 style="padding-bottom:12px">Video Lectures</h2>
+</div>
+
+
+<div class="item_list">
+<a href="#" class="list_header_link contracted"><h3 class="list_header">Introduction</h3> <span class="list_header_state hidden">(collapsed, click to expand)</span></a><ul class="item_section_list"><li class="item_row viewed"><span class="hidden">Completed</span><a data-lecture-id="1"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=1"
+   href="https://class.coursera.org/db/lecture/1"
+   rel="lecture-link"
+   class="lecture-link">
+Introduction to the course (14 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=1_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Introduction to the course (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=1_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Introduction to the course (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=1"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Introduction to the course (14 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link contracted"><h3 class="list_header">Relational Databases</h3> <span class="list_header_state hidden">(collapsed, click to expand)</span></a><ul class="item_section_list"><li class="item_row viewed"><span class="hidden">Completed</span><a data-lecture-id="2"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=2"
+   href="https://class.coursera.org/db/lecture/2"
+   rel="lecture-link"
+   class="lecture-link">
+The relational model (9 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=2_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for The relational model (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=2_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for The relational model (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=2"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for The relational model (9 min)</div>
+        </a>
+</div>
+</li><li class="item_row viewed"><span class="hidden">Completed</span><a data-lecture-id="3"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=3"
+   href="https://class.coursera.org/db/lecture/3"
+   rel="lecture-link"
+   class="lecture-link">
+Querying relational databases (6 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=3_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Querying relational databases (6 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=3_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Querying relational databases (6 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=3"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Querying relational databases (6 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link contracted"><h3 class="list_header">XML Data</h3> <span class="list_header_state hidden">(collapsed, click to expand)</span></a><ul class="item_section_list"><li class="item_row viewed"><span class="hidden">Completed</span><a data-lecture-id="16"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=16"
+   href="https://class.coursera.org/db/lecture/16"
+   rel="lecture-link"
+   class="lecture-link">
+Well-formed XML (13 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=16_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Well-formed XML (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=16_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Well-formed XML (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=16"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Well-formed XML (13 min)</div>
+        </a>
+</div>
+</li><li class="item_row viewed"><span class="hidden">Completed</span><a data-lecture-id="17"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=17"
+   href="https://class.coursera.org/db/lecture/17"
+   rel="lecture-link"
+   class="lecture-link">
+DTDs, IDs &amp; IDREFs (18 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=17_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for DTDs, IDs &amp; IDREFs (18 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=17_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for DTDs, IDs &amp; IDREFs (18 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=17"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for DTDs, IDs &amp; IDREFs (18 min)</div>
+        </a>
+</div>
+</li><li class="item_row viewed"><span class="hidden">Completed</span><a data-lecture-id="18"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=18"
+   href="https://class.coursera.org/db/lecture/18"
+   rel="lecture-link"
+   class="lecture-link">
+XML Schema (13 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=18_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for XML Schema (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=18_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for XML Schema (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=18"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for XML Schema (13 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link contracted"><h3 class="list_header">JSON Data</h3> <span class="list_header_state hidden">(collapsed, click to expand)</span></a><ul class="item_section_list"><li class="item_row viewed"><span class="hidden">Completed</span><a data-lecture-id="54"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=54"
+   href="https://class.coursera.org/db/lecture/54"
+   rel="lecture-link"
+   class="lecture-link">
+Introduction to JSON data (14 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=54_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Introduction to JSON data (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=54_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Introduction to JSON data (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=54"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Introduction to JSON data (14 min)</div>
+        </a>
+</div>
+</li><li class="item_row viewed"><span class="hidden">Completed</span><a data-lecture-id="55"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=55"
+   href="https://class.coursera.org/db/lecture/55"
+   rel="lecture-link"
+   class="lecture-link">
+JSON demo (22 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=55_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for JSON demo (22 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=55_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for JSON demo (22 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=55"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for JSON demo (22 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link contracted"><h3 class="list_header">Relational Algebra<br><small><em>Prerequisite: Relational Databases</em></small></h3> <span class="list_header_state hidden">(collapsed, click to expand)</span></a><ul class="item_section_list"><li class="item_row viewed"><span class="hidden">Completed</span><a data-lecture-id="4"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=4"
+   href="https://class.coursera.org/db/lecture/4"
+   rel="lecture-link"
+   class="lecture-link">
+Select, project, join (18 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=4_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Select, project, join (18 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=4_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Select, project, join (18 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=4"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Select, project, join (18 min)</div>
+        </a>
+</div>
+</li><li class="item_row viewed"><span class="hidden">Completed</span><a data-lecture-id="5"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=5"
+   href="https://class.coursera.org/db/lecture/5"
+   rel="lecture-link"
+   class="lecture-link">
+Set operators, renaming, notation (20 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=5_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Set operators, renaming, notation (20 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=5_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Set operators, renaming, notation (20 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=5"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Set operators, renaming, notation (20 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">SQL<br><small><em>Prerequisite: Relational Databases; Recommended: Relational Algebra</em></small></h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row viewed"><span class="hidden">Completed</span><a data-lecture-id="6"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=6"
+   href="https://class.coursera.org/db/lecture/6"
+   rel="lecture-link"
+   class="lecture-link">
+Introduction to SQL (5 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=6_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Introduction to SQL (5 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=6_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Introduction to SQL (5 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=6"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Introduction to SQL (5 min)</div>
+        </a>
+</div>
+</li><li class="item_row viewed"><span class="hidden">Completed</span><a data-lecture-id="7"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=7"
+   href="https://class.coursera.org/db/lecture/7"
+   rel="lecture-link"
+   class="lecture-link">
+Basic SELECT statement (10 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=7_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Basic SELECT statement (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=7_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Basic SELECT statement (10 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=7"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Basic SELECT statement (10 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="9"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=9"
+   href="https://class.coursera.org/db/lecture/9"
+   rel="lecture-link"
+   class="lecture-link">
+Table variables and set operators (11 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=9_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Table variables and set operators (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=9_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Table variables and set operators (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=9"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Table variables and set operators (11 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="10"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=10"
+   href="https://class.coursera.org/db/lecture/10"
+   rel="lecture-link"
+   class="lecture-link">
+Subqueries in WHERE clause (20 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=10_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Subqueries in WHERE clause (20 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=10_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Subqueries in WHERE clause (20 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=10"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Subqueries in WHERE clause (20 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="11"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=11"
+   href="https://class.coursera.org/db/lecture/11"
+   rel="lecture-link"
+   class="lecture-link">
+Subqueries in FROM and SELECT (8 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=11"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Subqueries in FROM and SELECT (8 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="12"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=12"
+   href="https://class.coursera.org/db/lecture/12"
+   rel="lecture-link"
+   class="lecture-link">
+The JOIN family of operators (25 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=12_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for The JOIN family of operators (25 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=12_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for The JOIN family of operators (25 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=12"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for The JOIN family of operators (25 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="13"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=13"
+   href="https://class.coursera.org/db/lecture/13"
+   rel="lecture-link"
+   class="lecture-link">
+Aggregation (25 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=13_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Aggregation (25 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=13_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Aggregation (25 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=13"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Aggregation (25 min)</div>
+        </a>
+</div>
+</li><li class="item_row viewed"><span class="hidden">Completed</span><a data-lecture-id="14"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=14"
+   href="https://class.coursera.org/db/lecture/14"
+   rel="lecture-link"
+   class="lecture-link">
+NULL values (6 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=14_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for NULL values (6 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=14_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for NULL values (6 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=14"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for NULL values (6 min)</div>
+        </a>
+</div>
+</li><li class="item_row viewed"><span class="hidden">Completed</span><a data-lecture-id="15"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=15"
+   href="https://class.coursera.org/db/lecture/15"
+   rel="lecture-link"
+   class="lecture-link">
+Data modification statements (15 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=15_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Data modification statements (15 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=15_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Data modification statements (15 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=15"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Data modification statements (15 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">Relational Design Theory<br><small><em>Prerequisite: Relational Algebra</em></small></h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row viewed"><span class="hidden">Completed</span><a data-lecture-id="24"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=24"
+   href="https://class.coursera.org/db/lecture/24"
+   rel="lecture-link"
+   class="lecture-link">
+Relational design overview (16 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=24_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Relational design overview (16 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=24_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Relational design overview (16 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=24"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Relational design overview (16 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="25"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=25"
+   href="https://class.coursera.org/db/lecture/25"
+   rel="lecture-link"
+   class="lecture-link">
+Functional dependencies (28 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=25_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Functional dependencies (28 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=25_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Functional dependencies (28 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=25"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Functional dependencies (28 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="26"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=26"
+   href="https://class.coursera.org/db/lecture/26"
+   rel="lecture-link"
+   class="lecture-link">
+Boyce-Codd normal form (23 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=26_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Boyce-Codd normal form (23 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=26_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Boyce-Codd normal form (23 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=26"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Boyce-Codd normal form (23 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="27"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=27"
+   href="https://class.coursera.org/db/lecture/27"
+   rel="lecture-link"
+   class="lecture-link">
+Multivalued dependencies, 4th normal form (24 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=27_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Multivalued dependencies, 4th normal form (24 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=27_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Multivalued dependencies, 4th normal form (24 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=27"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Multivalued dependencies, 4th normal form (24 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="35"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=35"
+   href="https://class.coursera.org/db/lecture/35"
+   rel="lecture-link"
+   class="lecture-link">
+Shortcomings of BCNF/4NF (12 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=35_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Shortcomings of BCNF/4NF (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=35_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Shortcomings of BCNF/4NF (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=35"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Shortcomings of BCNF/4NF (12 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">Querying XML<br><small><em>Prerequisite: XML Data</em></small></h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a data-lecture-id="19"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=19"
+   href="https://class.coursera.org/db/lecture/19"
+   rel="lecture-link"
+   class="lecture-link">
+XPath introduction<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=19_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for XPath introduction</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=19_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for XPath introduction</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=19"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for XPath introduction</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="20"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=20"
+   href="https://class.coursera.org/db/lecture/20"
+   rel="lecture-link"
+   class="lecture-link">
+XPath demo (22 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=20_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for XPath demo (22 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=20_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for XPath demo (22 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=20"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for XPath demo (22 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="21"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=21"
+   href="https://class.coursera.org/db/lecture/21"
+   rel="lecture-link"
+   class="lecture-link">
+XQuery introduction (5 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=21_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for XQuery introduction (5 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=21_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for XQuery introduction (5 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=21"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for XQuery introduction (5 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="22"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=22"
+   href="https://class.coursera.org/db/lecture/22"
+   rel="lecture-link"
+   class="lecture-link">
+XQuery demo (16 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=22_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for XQuery demo (16 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=22_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for XQuery demo (16 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=22"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for XQuery demo (16 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="23"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=23"
+   href="https://class.coursera.org/db/lecture/23"
+   rel="lecture-link"
+   class="lecture-link">
+XSLT (23 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=23_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for XSLT (23 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=23_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for XSLT (23 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=23"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for XSLT (23 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">Unified Modeling Language (UML)<br><small><em>Prerequisite: Relational Databases</em></small></h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a data-lecture-id="56"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=56"
+   href="https://class.coursera.org/db/lecture/56"
+   rel="lecture-link"
+   class="lecture-link">
+UML data modeling (25 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=56_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for UML data modeling (25 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=56_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for UML data modeling (25 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=56"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for UML data modeling (25 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="29"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=29"
+   href="https://class.coursera.org/db/lecture/29"
+   rel="lecture-link"
+   class="lecture-link">
+UML to relations (28 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=29_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for UML to relations (28 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=29_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for UML to relations (28 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=29"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for UML to relations (28 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">Indexes<br><small><em>Prerequisite: SQL</em></small></h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a data-lecture-id="37"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=37"
+   href="https://class.coursera.org/db/lecture/37"
+   rel="lecture-link"
+   class="lecture-link">
+Indexes (14 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=37_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Indexes (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=37_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Indexes (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=37"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Indexes (14 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">Constraints and Triggers<br><small><em>Prerequisite: SQL</em></small></h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a data-lecture-id="30"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=30"
+   href="https://class.coursera.org/db/lecture/30"
+   rel="lecture-link"
+   class="lecture-link">
+Motivation and overview (13 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=30_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Motivation and overview (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=30_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Motivation and overview (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=30"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Motivation and overview (13 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="34"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=34"
+   href="https://class.coursera.org/db/lecture/34"
+   rel="lecture-link"
+   class="lecture-link">
+Constraints of several types (26 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=34_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Constraints of several types (26 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=34_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Constraints of several types (26 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=34"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Constraints of several types (26 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="31"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=31"
+   href="https://class.coursera.org/db/lecture/31"
+   rel="lecture-link"
+   class="lecture-link">
+Referential integrity (22 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=31_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Referential integrity (22 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=31_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Referential integrity (22 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=31"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Referential integrity (22 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="32"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=32"
+   href="https://class.coursera.org/db/lecture/32"
+   rel="lecture-link"
+   class="lecture-link">
+Triggers introduction (15 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=32_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Triggers introduction (15 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=32_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Triggers introduction (15 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=32"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Triggers introduction (15 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="33"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=33"
+   href="https://class.coursera.org/db/lecture/33"
+   rel="lecture-link"
+   class="lecture-link">
+Triggers demo (part 1) (30 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=33_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Triggers demo (part 1) (30 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=33_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Triggers demo (part 1) (30 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=33"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Triggers demo (part 1) (30 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="36"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=36"
+   href="https://class.coursera.org/db/lecture/36"
+   rel="lecture-link"
+   class="lecture-link">
+Triggers demo (part 2) (13 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=36_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Triggers demo (part 2) (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=36_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Triggers demo (part 2) (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=36"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Triggers demo (part 2) (13 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">Transactions<br><small><em>Prerequisite: SQL</em></small></h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a data-lecture-id="43"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=43"
+   href="https://class.coursera.org/db/lecture/43"
+   rel="lecture-link"
+   class="lecture-link">
+Introduction to transactions (14 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=43_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Introduction to transactions (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=43_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Introduction to transactions (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=43"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Introduction to transactions (14 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="44"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=44"
+   href="https://class.coursera.org/db/lecture/44"
+   rel="lecture-link"
+   class="lecture-link">
+Transaction properties (13 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=44_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Transaction properties (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=44_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Transaction properties (13 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=44"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Transaction properties (13 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="45"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=45"
+   href="https://class.coursera.org/db/lecture/45"
+   rel="lecture-link"
+   class="lecture-link">
+Isolation levels (18 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=45_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Isolation levels (18 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=45_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Isolation levels (18 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=45"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Isolation levels (18 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">Views<br><small><em>Prerequisite: SQL, Constraints and Triggers</em></small></h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a data-lecture-id="38"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=38"
+   href="https://class.coursera.org/db/lecture/38"
+   rel="lecture-link"
+   class="lecture-link">
+Defining and using views (14 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=38_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Defining and using views (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=38_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Defining and using views (14 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=38"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Defining and using views (14 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="39"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=39"
+   href="https://class.coursera.org/db/lecture/39"
+   rel="lecture-link"
+   class="lecture-link">
+View modifications - introduction (9 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=39_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for View modifications - introduction (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=39_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for View modifications - introduction (9 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=39"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for View modifications - introduction (9 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="40"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=40"
+   href="https://class.coursera.org/db/lecture/40"
+   rel="lecture-link"
+   class="lecture-link">
+View modifications using triggers (33 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=40_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for View modifications using triggers (33 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=40_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for View modifications using triggers (33 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=40"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for View modifications using triggers (33 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="41"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=41"
+   href="https://class.coursera.org/db/lecture/41"
+   rel="lecture-link"
+   class="lecture-link">
+Automatic view modifications (23 min) <i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=41_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Automatic view modifications (23 min) </div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=41_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Automatic view modifications (23 min) </div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=41"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Automatic view modifications (23 min) </div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="42"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=42"
+   href="https://class.coursera.org/db/lecture/42"
+   rel="lecture-link"
+   class="lecture-link">
+Materialized views (16 min) <i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=42"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Materialized views (16 min) </div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">Authorization<br><small><em>Prerequisite: SQL, Views</em></small></h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a data-lecture-id="46"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=46"
+   href="https://class.coursera.org/db/lecture/46"
+   rel="lecture-link"
+   class="lecture-link">
+Authorization (11 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=46_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Authorization (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=46_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Authorization (11 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=46"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Authorization (11 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">Recursion in SQL<br><small><em>Prerequisite: SQL</em></small></h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a data-lecture-id="47"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=47"
+   href="https://class.coursera.org/db/lecture/47"
+   rel="lecture-link"
+   class="lecture-link">
+Basic recursive WITH statement - introduction (12 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=47_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Basic recursive WITH statement - introduction (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=47_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Basic recursive WITH statement - introduction (12 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=47"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Basic recursive WITH statement - introduction (12 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="48"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=48"
+   href="https://class.coursera.org/db/lecture/48"
+   rel="lecture-link"
+   class="lecture-link">
+Basic recursive WITH statement - demo (30 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=48_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Basic recursive WITH statement - demo (30 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=48_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Basic recursive WITH statement - demo (30 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=48"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Basic recursive WITH statement - demo (30 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="49"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=49"
+   href="https://class.coursera.org/db/lecture/49"
+   rel="lecture-link"
+   class="lecture-link">
+Nonlinear and mutual recursion (21 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=49_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Nonlinear and mutual recursion (21 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=49_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Nonlinear and mutual recursion (21 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=49"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Nonlinear and mutual recursion (21 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">On-Line Analytical Processing (OLAP)<br><small><em>Prerequisite: SQL</em></small></h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row unviewed"><a data-lecture-id="50"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=50"
+   href="https://class.coursera.org/db/lecture/50"
+   rel="lecture-link"
+   class="lecture-link">
+Introduction to OLAP (18 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=50_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for Introduction to OLAP (18 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=50_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for Introduction to OLAP (18 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=50"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for Introduction to OLAP (18 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="51"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=51"
+   href="https://class.coursera.org/db/lecture/51"
+   rel="lecture-link"
+   class="lecture-link">
+OLAP demo (27 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=51_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for OLAP demo (27 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=51_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for OLAP demo (27 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=51"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for OLAP demo (27 min)</div>
+        </a>
+</div>
+</li></ul><a href="#" class="list_header_link expanded"><h3 class="list_header">NoSQL Systems<br><small><em>Prerequisite: SQL</em></small></h3> <span class="list_header_state hidden">(expanded, click to collapse)</span></a><ul class="item_section_list"><li class="item_row viewed"><span class="hidden">Completed</span><a data-lecture-id="52"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=52"
+   href="https://class.coursera.org/db/lecture/52"
+   rel="lecture-link"
+   class="lecture-link">
+NoSQL Motivation (20 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=52_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for NoSQL Motivation (20 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=52_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for NoSQL Motivation (20 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=52"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for NoSQL Motivation (20 min)</div>
+        </a>
+</div>
+</li><li class="item_row unviewed"><a data-lecture-id="53"
+   data-lecture-view-link="https://class.coursera.org/db/lecture/view?lecture_id=53"
+   href="https://class.coursera.org/db/lecture/53"
+   rel="lecture-link"
+   class="lecture-link">
+NoSQL Overview (27 min)<i class="icon-facetime-video" style="padding-left:5px;"></i>
+</a>
+<div class="item_resource">
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=53_en&format=txt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (text)" >
+           <i class="icon-align-justify resource" ></i>
+           <div class="hidden">Subtitles (text) for NoSQL Overview (27 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/subtitles?q=53_en&format=srt"
+           data-placement="above" rel="twipsy" 
+           title="Subtitles (srt)" >
+           <i class="icon-list resource" ></i>
+           <div class="hidden">Subtitles (srt) for NoSQL Overview (27 min)</div>
+        </a>
+        <a target="_new" href="https://class.coursera.org/db/lecture/download.mp4?lecture_id=53"
+           data-placement="above" rel="twipsy" 
+           title="Video (MP4)" >
+           <i class="icon-download-alt resource" ></i>
+           <div class="hidden">Video (MP4) for NoSQL Overview (27 min)</div>
+        </a>
+</div>
+</li></ul></div>
+<script>
+    var fancyboxImageURL = 'https://class.coursera.org/assets/app/lecture/css/fancybox.png';
+</script>
+        </div>
+    </div>
+            <script src="https://dat5vykxe2qa7.cloudfront.net/site-static/js/coursera-libs/profiles.js" type="text/javascript"></script>
+</body>
+
+</html>

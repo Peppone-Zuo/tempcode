@@ -1,0 +1,13 @@
+# Netscape HTTP Cookie File
+# http://www.netscape.com/newsref/std/cookie_spec.html
+# This is a generated file!  Do not edit.
+
+class.coursera.org	FALSE	/	FALSE	0	__204u	5130851937-1350912635586
+www.coursera.org	FALSE	/	TRUE	1353504640	maestro_login	Y55jjpRjg6TLNcPRH4SZEGMRnJq9vD9LLDUxkguOJ3u%2B3vxvWOpEEbP8GLJ8szC85IdcozAUdladDzign96cSA%3D%3D%7C4pa2SSFe28YjucIozo5oEaa3t%2FoY6u22LBmXnfwQRnaKbrsZLpKeFo7pWkMWdy2ubt4RsweRuxvcMGYEC53j8YV3tVkb%2BjdwBC%2FyC8N70AQDtevThdCciHNHMSkbob2BLyageSNjqc0haSSY8HZ1goovAK4Z%2BpKTUK2co0JAKZKFRNoMJKlUl%2B%2FMSCbaaGJuKT%2Bvsn%2B0ag1C%2B4XEEqDjKw8yZmNgaEoLqv1fvnK63RuBBX1cQ4RuGpN%2F8fQz5NYOuz8uc4G1lu6dVSFk0h3EQwQfNWGh9T3kGCBH812EM9PujKlii7iSRazdY8v8LNa%2Bq9lro0qrbPYspgXJ9k8BmsK0hJAUy4WyztJwD3z3Ptq0jf6jxCHcB2Aec3sHv6CX
+class.coursera.org	FALSE	/db	FALSE	1353504642	csrf_token	f3pWJeF4gCnBdqJZv65E
+class.coursera.org	FALSE	/db	FALSE	1353504642	session	uEgSfY9w6OkdsXL6ugDlXNhlF5qUUfy0Yb1bbZGNt8eKJ89kGdtX9wp%2FM9W%2F%2FdPJ8t89nkI3ChyXO%2BzgRA2k2A%3D%3D%7CtH5KGfqvW89UvgNp%2FXNN4vRMfpfGbyYruhZsyvtEXSC66C0WsDvPP%2BSxnBj4JeL8xoFnAUi76%2BA1O1upAnA%2Fqg%3D%3D
+.coursera.org	TRUE	/	FALSE	1413984644	__utma	158142248.286093158.1350912635.1350912635.1350912635.1
+.coursera.org	TRUE	/	FALSE	1350914444	__utmb	158142248.3.10.1350912635
+.coursera.org	TRUE	/	FALSE	0	__utmc	158142248
+.coursera.org	TRUE	/	FALSE	1366680644	__utmz	158142248.1350912635.1.1.utmcsr=class.coursera.org|utmccn=(referral)|utmcmd=referral|utmcct=/db/auth/login_receiver
+www.coursera.org	FALSE	/	FALSE	1352122247	sessionid	49b07be60e4b759aaeb9d1a1fbd46c7e
