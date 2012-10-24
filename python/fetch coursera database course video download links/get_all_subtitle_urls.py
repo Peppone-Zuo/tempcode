@@ -44,7 +44,8 @@ for v in videos:
     #url = "https://class.coursera.org/db/lecture/view?lecture_id="+lecture_id
     res.append((lecture_title, url))
 
-subtitle_url = "https://class.coursera.org/db/lecture/subtitles?q=%s_en&format=txt"
+subtitle_url = "https://class.coursera.org/db/lecture/subtitles?q=%s_en&format=srt"
+#subtitle_url = "https://class.coursera.org/db/lecture/subtitles?q=%s_en&format=txt"
 fout = open("subtitles.txt", "w")
 
 for t, i in res:
